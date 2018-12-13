@@ -4,7 +4,7 @@ Glyphs.app plug-in for displaying samples of installed fonts for the glyph you a
 
 ![ShowCharacter](ShowCharacter.png)
 
-It will not display anything if the zoom of the current tab is below 150. So, it will not clutter your view if you zoom out.
+It will not display anything if the zoom of the current tab is below 200. So, it will not clutter your view if you zoom out.
 
 ### Installation
 
