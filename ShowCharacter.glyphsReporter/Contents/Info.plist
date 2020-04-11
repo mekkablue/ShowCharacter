@@ -13,15 +13,15 @@
 	<key>CFBundleName</key>
 	<string>ShowCharacter</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>2.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>UpdateFeedURL</key>
 	<string>https://raw.githubusercontent.com/mekkablue/ShowCharacter/master/ShowCharacter.glyphsReporter/Contents/Info.plist</string>
 	<key>productPageURL</key>
 	<string>https://github.com/mekkablue/ShowCharacter</string>
 	<key>productReleaseNotes</key>
-	<string>Initial Release</string>
+	<string>Glyphs 3 compatibility</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright, Rainer Erich Scheichelbauer, 2018</string>
 	<key>NSPrincipalClass</key>
