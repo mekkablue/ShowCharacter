@@ -1,12 +1,13 @@
 # encoding: utf-8
+from __future__ import division, print_function, unicode_literals
 
 ###########################################################################################################
 #
 #
-#	Reporter Plugin
+#	Filter without dialog Plugin
 #
 #	Read the docs:
-#	https://github.com/schriftgestalt/GlyphsSDK/tree/master/Python%20Templates/Reporter
+#	https://github.com/schriftgestalt/GlyphsSDK/tree/master/Python%20Templates/Filter%20without%20Dialog
 #
 #
 ###########################################################################################################
@@ -17,6 +18,7 @@ from GlyphsApp.plugins import *
 
 class ShowCharacter(ReporterPlugin):
 
+	@objc.python_method
 	def settings(self):
 		self.menuName = Glyphs.localize({
 			'en': u'Character',
@@ -25,6 +27,7 @@ class ShowCharacter(ReporterPlugin):
 			'zh': u'👩‍🏫参考字',
 		})
 	
+	@objc.python_method
 	def drawMultipleTextAtPoint(self, text, textPosition, fontSize=10.0, fontColor=NSColor.blackColor(), align='left', fontNames=() ):
 		try:
 			alignment = {
@@ -62,7 +65,7 @@ class ShowCharacter(ReporterPlugin):
 			import traceback
 			print traceback.format_exc()
 	
-		
+	@objc.python_method
 	def foreground(self, layer):
 		glyph = layer.parent
 		character = glyph.glyphInfo.unicharString()
@@ -105,15 +108,7 @@ class ShowCharacter(ReporterPlugin):
 					align="bottomleft",
 					)
 
-	# def inactiveLayer(self, layer):
-	# 	NSColor.redColor().set()
-	# 	if layer.paths:
-	# 		layer.bezierPath.fill()
-	# 	if layer.components:
-	# 		for component in layer.components:
-	# 			component.bezierPath.fill()
-
-
+	@objc.python_method
 	def __file__(self):
 		"""Please leave this method unchanged"""
 		return __file__
