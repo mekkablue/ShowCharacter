@@ -56,14 +56,15 @@ class ShowCharacter(ReporterPlugin):
 					NSFontAttributeName: font,
 					NSForegroundColorAttributeName: fontColor,
 				}
-				displayText = NSAttributedString.alloc().initWithString_attributes_(unicode(text), fontAttributes)
+				displayText = NSAttributedString.alloc().initWithString_attributes_("%s"%text, fontAttributes)
 				displayText.drawAtPoint_alignment_(textPosition, textAlignment)
 				advanceWidth = displayText.size().width
 				x,y = textPosition
 				textPosition = (x+advanceWidth, y)
-		except:
+		except Exception as e:
+			print(e)
 			import traceback
-			print traceback.format_exc()
+			print(traceback.format_exc())
 	
 	@objc.python_method
 	def foreground(self, layer):
