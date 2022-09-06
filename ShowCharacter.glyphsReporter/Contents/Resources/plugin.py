@@ -70,6 +70,12 @@ class ShowCharacter(ReporterPlugin):
 	def foreground(self, layer):
 		glyph = layer.parent
 		character = glyph.glyphInfo.unicharString()
+
+		# check if the glyph is composed of multi glyphs
+		if (glyph.baseGlyphs()):
+				character = ""
+				for glyphInfo in glyph.baseGlyphs():
+					character += glyphInfo.unicharString()
 		
 		# try again if glyph has no unicode character associated with it:
 		if not character and "." in glyph.name:
