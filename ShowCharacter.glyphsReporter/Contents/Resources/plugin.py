@@ -15,16 +15,23 @@ from __future__ import division, print_function, unicode_literals
 import objc
 from GlyphsApp import *
 from GlyphsApp.plugins import *
+from AppKit import NSPoint, NSColor, NSFont, NSFontAttributeName, NSForegroundColorAttributeName, NSAttributedString
 
 class ShowCharacter(ReporterPlugin):
 
 	@objc.python_method
 	def settings(self):
 		self.menuName = Glyphs.localize({
-			'en': u'Character',
-			'de': u'Zeichen',
-			'fr': u'caractère',
-			'zh': u'👩‍🏫参考字',
+			'en': 'Character',
+			'de': 'Zeichen',
+			'cs': 'znak',
+			'fr': 'caractère',
+			'pt': 'caractere',
+			'es': 'carácter',
+			'it': 'carattere',
+			'zh': '👩‍🏫参考字',
+			'ja': '👩‍🏫文字',
+			'ko': '👩‍🏫문자',
 		})
 	
 	@objc.python_method
